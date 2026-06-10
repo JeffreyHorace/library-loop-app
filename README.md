@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Library Loop
 
-## Getting Started
+Library Loop is a Base mini app for a modern library circulation desk. It has exactly three onchain write actions:
 
-First, run the development server:
+- Shelve Book -> `shelveBook()`
+- Stamp Card -> `stampCard()`
+- Quiet Bell -> `quietBell()`
+
+There is no token, no points system, no invite flow, and no app fee. Users only pay Base gas.
+
+## Stack
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- Wagmi
+- Viem
+
+## Local Setup
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+If port 3000 is already in use:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run dev -- --port 3002
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Required Deployment Values
 
-## Learn More
+Create these environment variables before production deployment:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+NEXT_PUBLIC_LIBRARY_LOOP_CONTRACT_ADDRESS=0x...
+NEXT_PUBLIC_BASE_BUILDER_DATA_SUFFIX=0x...
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The Base offchain attribution tag is intentionally hardcoded in `src/app/layout.tsx`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```tsx
+<meta name="base:app_id" content="REPLACE_WITH_BASE_DEV_VERIFY_TOKEN" />
+```
 
-## Deploy on Vercel
+Replace the placeholder with the base.dev verification token before final deployment.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contract
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The Solidity source is in `contracts/LibraryLoop.sol`. The frontend ABI in `src/lib/abi.ts` matches this contract and reads:
+
+- `userShelves(address)`
+- `userCards(address)`
+- `userBells(address)`
+- `totalShelves()`
+- `totalCards()`
+- `totalBells()`
+
+Every write call explicitly passes `dataSuffix` from `NEXT_PUBLIC_BASE_BUILDER_DATA_SUFFIX`.
+
+## Safety Notes
+
+The UI only shows friendly English transaction states such as `Pending`, `Confirmed`, `Failed`, and `Request rejected`. Raw wallet errors, RPC details, environment values, calldata, and attribution strings are not rendered in the page.
+
