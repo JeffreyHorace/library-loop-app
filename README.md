@@ -34,8 +34,8 @@ npm run dev -- --port 3002
 Create these environment variables before production deployment:
 
 ```bash
-NEXT_PUBLIC_LIBRARY_LOOP_CONTRACT_ADDRESS=0x...
-NEXT_PUBLIC_BASE_BUILDER_DATA_SUFFIX=0x...
+NEXT_PUBLIC_LIBRARY_LOOP_CONTRACT_ADDRESS=0xfea7baf8ca18ab4768b36d8d4c851e56f8f688f1
+NEXT_PUBLIC_BASE_BUILDER_DATA_SUFFIX=0x62635f35746a6f776567390b0080218021802180218021802180218021
 ```
 
 The Base offchain attribution tag is intentionally hardcoded in `src/app/layout.tsx`:
@@ -57,9 +57,8 @@ The Solidity source is in `contracts/LibraryLoop.sol`. The frontend ABI in `src/
 - `totalCards()`
 - `totalBells()`
 
-Every write call explicitly passes `dataSuffix` from `NEXT_PUBLIC_BASE_BUILDER_DATA_SUFFIX`.
+Every write call explicitly passes the `bc_5tjoweg9` encoded `dataSuffix` from `NEXT_PUBLIC_BASE_BUILDER_DATA_SUFFIX`.
 
 ## Safety Notes
 
 The UI only shows friendly English transaction states such as `Pending`, `Confirmed`, `Failed`, and `Request rejected`. Raw wallet errors, RPC details, environment values, calldata, and attribution strings are not rendered in the page.
-
