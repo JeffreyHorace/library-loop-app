@@ -105,3 +105,13 @@ Replace the placeholder value with the verification value from base.dev before f
 ## Contract
 
 The Solidity source is located at:
+
+```text
+contracts/LibraryLoop.sol
+```
+
+The frontend ABI is located at:
+
+```text
+src/lib/abi.ts
+```
