@@ -125,3 +125,12 @@ The app reads the following values:
 - `userShelves(address)`
 - `userCards(address)`
 - `userBells(address)`
+- `totalShelves()`
+- `totalCards()`
+- `totalBells()`
+
+## Contract Writes
+
+The app supports the following write calls:
+
+- `shelveBook()`
