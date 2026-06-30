@@ -37,3 +37,12 @@ The app is built as a web application using the Next.js App Router.
 - Friendly transaction status messages
 - TypeScript codebase
 - Tailwind CSS styling
+- Wagmi and Viem integration
+
+## Stack
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- Wagmi
+- Viem
