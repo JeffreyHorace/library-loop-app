@@ -76,3 +76,13 @@ npm run dev -- --port 3002
 Then open:
 
 ```text
+http://localhost:3002
+```
+
+## Required Deployment Values
+
+Before deploying to production, create the following environment variables:
+
+```bash
+NEXT_PUBLIC_LIBRARY_LOOP_CONTRACT_ADDRESS=0xfea7baf8ca18ab4768b36d8d4c851e56f8f688f1
+NEXT_PUBLIC_BASE_BUILDER_DATA_SUFFIX=0x62635f35746a6f776567390b0080218021802180218021802180218021
