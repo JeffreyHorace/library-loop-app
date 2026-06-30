@@ -154,3 +154,13 @@ Choose one of the three available actions:
 1. Shelve a book.
 2. Stamp a card.
 3. Ring the quiet bell.
+
+After submitting a transaction, the interface displays a friendly status.
+
+Once confirmed, the relevant count can be read back from the contract.
+
+## Transaction States
+
+The UI uses clear English status labels, including:
+
+- `Pending`
