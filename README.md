@@ -17,3 +17,13 @@ Users only pay Base gas for transactions.
 ## Repository
 
 GitHub: https://github.com/JeffreyHorace/library-loop-app.git
+
+## Overview
+
+Library Loop presents a friendly interface around a small smart contract.
+
+The frontend lets users perform the three supported library-themed actions.
+
+It also reads personal and global counts from the contract.
+
+The app is built as a web application using the Next.js App Router.
