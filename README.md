@@ -134,3 +134,13 @@ The app reads the following values:
 The app supports the following write calls:
 
 - `shelveBook()`
+- `stampCard()`
+- `quietBell()`
+
+Every write call explicitly passes the `bc_5tjoweg9` encoded `dataSuffix` from:
+
+```text
+NEXT_PUBLIC_BASE_BUILDER_DATA_SUFFIX
+```
+
+## Usage
