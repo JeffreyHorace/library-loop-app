@@ -173,3 +173,13 @@ These messages are intended to keep the app approachable and easy to understand.
 ## Safety Notes
 
 The page does not display raw wallet errors.
+
+The page does not display RPC details.
+
+The page does not display environment values.
+
+The page does not display calldata.
+
+The page does not display attribution strings.
+
+## Development Notes
