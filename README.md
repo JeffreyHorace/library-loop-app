@@ -115,3 +115,13 @@ The frontend ABI is located at:
 ```text
 src/lib/abi.ts
 ```
+
+The frontend ABI matches the contract used by the app.
+
+## Contract Reads
+
+The app reads the following values:
+
+- `userShelves(address)`
+- `userCards(address)`
+- `userBells(address)`
