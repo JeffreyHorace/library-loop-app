@@ -86,3 +86,13 @@ Before deploying to production, create the following environment variables:
 ```bash
 NEXT_PUBLIC_LIBRARY_LOOP_CONTRACT_ADDRESS=0xfea7baf8ca18ab4768b36d8d4c851e56f8f688f1
 NEXT_PUBLIC_BASE_BUILDER_DATA_SUFFIX=0x62635f35746a6f776567390b0080218021802180218021802180218021
+```
+
+These values are used by the frontend when interacting with the deployed contract.
+
+## Base App Verification
+
+The Base offchain attribution tag is intentionally defined in:
+
+```text
+src/app/layout.tsx
