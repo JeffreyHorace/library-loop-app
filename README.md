@@ -66,3 +66,13 @@ Open the local app in your browser, typically at:
 ```text
 http://localhost:3000
 ```
+
+If port `3000` is already in use, start the app on another port:
+
+```bash
+npm run dev -- --port 3002
+```
+
+Then open:
+
+```text
