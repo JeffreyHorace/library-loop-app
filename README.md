@@ -144,3 +144,13 @@ NEXT_PUBLIC_BASE_BUILDER_DATA_SUFFIX
 ```
 
 ## Usage
+
+Run the app locally or deploy it with the required public environment values.
+
+Connect with a compatible wallet on Base.
+
+Choose one of the three available actions:
+
+1. Shelve a book.
+2. Stamp a card.
+3. Ring the quiet bell.
