@@ -46,3 +46,13 @@ The app is built as a web application using the Next.js App Router.
 - Tailwind CSS
 - Wagmi
 - Viem
+
+## Local Setup
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
