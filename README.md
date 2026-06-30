@@ -96,3 +96,12 @@ The Base offchain attribution tag is intentionally defined in:
 
 ```text
 src/app/layout.tsx
+```
+
+Look for the `base:app_id` meta tag.
+
+Replace the placeholder value with the verification value from base.dev before final deployment.
+
+## Contract
+
+The Solidity source is located at:
