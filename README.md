@@ -183,3 +183,13 @@ The page does not display calldata.
 The page does not display attribution strings.
 
 ## Development Notes
+
+Keep the contract ABI in `src/lib/abi.ts` aligned with `contracts/LibraryLoop.sol`.
+
+Update deployment configuration carefully before publishing.
+
+Verify the Base app metadata before final release.
+
+Test all three write actions after deployment.
+
+Confirm that the read values update as expected after successful transactions.
