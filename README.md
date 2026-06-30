@@ -164,3 +164,12 @@ Once confirmed, the relevant count can be read back from the contract.
 The UI uses clear English status labels, including:
 
 - `Pending`
+- `Confirmed`
+- `Failed`
+- `Request rejected`
+
+These messages are intended to keep the app approachable and easy to understand.
+
+## Safety Notes
+
+The page does not display raw wallet errors.
