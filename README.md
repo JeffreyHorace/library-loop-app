@@ -27,3 +27,13 @@ The frontend lets users perform the three supported library-themed actions.
 It also reads personal and global counts from the contract.
 
 The app is built as a web application using the Next.js App Router.
+
+## Features
+
+- Base mini app experience
+- Three focused onchain write actions
+- Read support for user-specific activity counts
+- Read support for global activity totals
+- Friendly transaction status messages
+- TypeScript codebase
+- Tailwind CSS styling
